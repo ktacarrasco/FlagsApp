@@ -43,26 +43,15 @@ class Adapter(var mdataSetP: List<Flags>, var listenerS: MainFragment): Recycler
         val titletv ="${photo.name}"
 
         holder.titleTv.text = titletv
-
-//        Picasso.get()
-//            .load(photo.url)
-//            .placeholder(R.drawable.ic_launcher_foreground)
-//            .into(holder.photoTv)
-
-        /*if (photo.favStatus.equals(true)) {
-            holder.itemView.favBtn.setBackgroundResource(R.drawable.ic_favorite_red_24dp);
-            holder.itemView.favBtn.setSelected(true)
-        }
-        else{
-            holder.itemView.favBtn.setBackgroundResource(R.drawable.ic_favorite_shadow_24dp);
-            holder.itemView.favBtn.setSelected(false)}*/
-
+       /* Picasso.get()
+            .load(photo.image)
+            .placeholder(R.drawable.ic_launcher_foreground)
+            .into(holder.photoTv)*/
 
         holder.itemView.setOnClickListener(View.OnClickListener{
 
-            Toast.makeText(holder.itemView.context,"$titletv", Toast.LENGTH_SHORT).show()
+            Toast.makeText(holder.itemView.context," $titletv", Toast.LENGTH_SHORT).show()
             listenerS.onItemClick(mdataSetP.get(position))
-
 
         })
 

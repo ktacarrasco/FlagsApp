@@ -5,7 +5,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface Api {
-    @GET("/all")
+    @GET("all")
     fun getFlags(): Call<Flags>
     //fun getTragos(): Call<List<Cocktails>>
 }

@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graf"
-    app:startDestination="@id/mainFragment">
-
+    app:startDestination="@id/firstFragment">
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/firstFragment"
         android:name="com.example.banderasapp.ui.main.MainFragment"
-        android:label="main_fragment"
-        tools:layout="@layout/main_fragment" />
+        android:label="fragment_first"
+        tools:layout="@layout/main_fragment" >
+
+    </fragment>
+
 </navigation>
