@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface Api {
     @GET("all")
-    fun getFlags(): Call<Flags>
+    fun getFlags(): Call<List<Flags>>
     //fun getTragos(): Call<List<Cocktails>>
 }

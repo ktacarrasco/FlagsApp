@@ -10,7 +10,7 @@ interface DaoFlags {
 
     //Insertar un listado
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertAll(listCocktails: Flags)
+    suspend fun insertAll(listCocktails: List<Flags>)
 
     //agregar fav
     @Update

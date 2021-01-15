@@ -10,6 +10,14 @@
         android:label="fragment_first"
         tools:layout="@layout/main_fragment" >
 
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.banderasapp.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
 
 </navigation>

@@ -14,6 +14,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="10dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
@@ -26,26 +27,6 @@
             android:background="?android:attr/listDivider"
             android:outlineAmbientShadowColor="#010102" />
 
-        <TextView
-            android:id="@+id/priceView"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:layout_marginStart="35dp"
-            android:layout_marginEnd="64dp"
-            android:textColor="#FA0C0101"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="198dp" />
-
-        <ImageView
-            android:id="@+id/photoTV"
-            android:layout_width="392dp"
-            android:layout_height="174dp"
-            app:layout_constraintBottom_toTopOf="@+id/titleTV"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="117dp"
-            tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/titleTV"

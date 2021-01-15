@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.banderasapp.R
@@ -53,7 +54,9 @@ class MainFragment : Fragment() ,Adapter.MyClickListener  {
     }
 
     override fun onItemClick(flags: Flags) {
-        TODO("Not yet implemented")
+        val bundle=Bundle()
+        bundle.putInt("id",flags.id)
+        findNavController().navigate(R.id.action_firstFragment_to_secondFragment,bundle)
     }
 
     override fun favClick(flags: Flags) {

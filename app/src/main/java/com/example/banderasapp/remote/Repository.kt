@@ -10,6 +10,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
 
 class Repository(context: Context) {
 
@@ -45,8 +47,9 @@ class Repository(context: Context) {
         val call = service.getFlags()
 
 
-        call.enqueue(object : Callback<Flags> {
-            override fun onResponse(call: Call<Flags>, response: retrofit2.Response<Flags>) {
+
+        call.enqueue(object : Callback<List<Flags>> {
+            override fun onResponse(call: Call<List<Flags>>, response: Response<List<Flags>>) {
                 Log.d(tag, response.body().toString())
                 CoroutineScope(Dispatchers.IO).launch {
 
@@ -54,7 +57,7 @@ class Repository(context: Context) {
                 }
             }
 
-            override fun onFailure(call: Call<Flags>, t: Throwable) {
+            override fun onFailure(call: Call<List<Flags>>, t: Throwable) {
                 Log.d(tag, t.message.toString())
 
             }
