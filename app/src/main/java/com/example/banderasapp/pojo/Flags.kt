@@ -1,4 +1,17 @@
 package com.example.banderasapp.pojo
 
-class Flags {
-}
+import androidx.annotation.NonNull
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+
+    @Entity(tableName = "Flags_table")
+    data class Flags (@PrimaryKey() @NonNull val  id : Int,
+                          val name: String,
+                          val alpha2Code: String,
+                          val capital: String,
+                          val region: String,
+                          val subregion: String,
+                          val population: Int,
+                            val nativeName: String)
