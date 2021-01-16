@@ -76,21 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/cardview_default_elevation"
-                android:text="Un teléfono celular es un dispositivo inalámbrico electrónico que permite tener acceso a la red de telefonía celular o móvil. Se denomina celular debido a las antenas repetidoras que conforman la red, cada una de las cuales es una célula, si bien existen redes telefónicas móviles satelitales. Su principal característica es su portabilidad, que permite comunicarse desde casi cualquier lugar. Aunque su principal función es la comunicación de voz, como el teléfono convencional, su rápido desarrollo ha incorporado otras funciones como son cámara fotográfica, agenda, acceso a internet, reproducción de video e incluso GPS y reproductor mp3. Todos los teléfonos celulares tienen una variedad de características en común, pero los fabricantes buscan diferenciación de producto por añadir funciones para atraer consumidores. Esta competición ha dirigido a una gran innovación en el desarrollo del teléfono celular en los últimos 20 años.
-
-Los componentes comunes encontrados en todos los teléfonos son:
-
-Una batería, proporcionando la fuente de energía para las funciones del teléfono. Un teléfono moderno generalmente usa una batería de iones de litio (LIB), mientras que los teléfonos más antiguos usaban baterías de hidruro de níquel-metal (Ni-MH). Desde fines de los años 2010 la mayoría de los teléfonos inteligentes las baterías no son extraíbles por el consumidor.
-Un mecanismo de entrada para dejar interactuar al usuario con el teléfono. La entrada más común son las pantallas táctiles en los teléfonos inteligentes, pero en los más antiguos se usan botones, es decir por medio del teclado físico (del tipo 3x4).
-Una pantalla que repite al usuario lo que está escribiendo, muestra mensajes de texto, contactos y más. Las pantallas cada vez son de mayor tamaño y resolución, además de ser capacitivas o táctiles (a diferencia de los teléfonos antiguos que solamente actuaban como visualizador).
-Los servicios básicos de telefonía móvil que permiten a los usuarios hacer llamadas y enviar mensajes de texto.
-Todos los teléfonos GSM utilizan una tarjeta SIM que permiten tener una cuenta que puede intercambiarse entre los dispositivos. Algunos dispositivos CDMA también tienen una tarjeta similar llamado un R-UIM.
-Algunos dispositivos GSM, WCDMA, iDEN y algunos teléfonos satelitales se identifican por un número de Identidad del Equipo Móvil Internacional (IMEI).
-Los teléfonos móviles de gama baja se refieren generalmente como teléfonos con funciones, y ofrecen servicios de telefonía básica. Los terminales con capacidad de computación más avanzada mediante el uso de aplicaciones de software nativas son conocidos como teléfonos inteligentes.
-
-Se han introducido varias series de teléfonos para hacer frente a segmentos de mercado específicos, tales como el RIMBlackBerry centrándose en las necesidades de correo electrónico de clientes corporativos/empresariales, la serie Sony-Ericsson 'Walkman' de música/móvil y serie 'Cyber-shot' de cámara/teléfono, el Nokia Nseries de teléfonos multimedia, el Palm Pre, el HTC Dream y el iPhone de Apple.
-
-En Argentina cuando se compra un equipo con abono, la empresa de telefonía exige un período mínimo de permanencia, que figura en el contrato. Cuando termina ese plazo, la empresa tiene la obligación de dar el código de desbloqueo del equipo. Si un cliente quiere cambiar de compañía, sin respetar ese período de permanencia, puede hacerlo pagando una suma por esa rescisión anticipada."
+                android:text="Para comunicarse con nuestra  compañía, sin respetar ese período de permanencia, puede hacerlo pagando una suma por esa rescisión anticipada."
                 tools:ignore="MissingConstraints" />
 
 

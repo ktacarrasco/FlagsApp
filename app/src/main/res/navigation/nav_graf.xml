@@ -6,7 +6,7 @@
     app:startDestination="@id/firstFragment">
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.example.banderasapp.ui.main.MainFragment"
+        android:name="com.example.anchorbooks.ui.main.MainFragment"
         android:label="fragment_first"
         tools:layout="@layout/main_fragment" >
 
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.banderasapp.SecondFragment"
+        android:name="com.example.anchorbooks.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
 

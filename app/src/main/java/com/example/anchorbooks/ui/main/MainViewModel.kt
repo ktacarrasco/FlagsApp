@@ -1,17 +1,16 @@
-package com.example.banderasapp.ui.main
+package com.example.anchorbooks.ui.main
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.banderasapp.pojo.Flags
-import com.example.banderasapp.remote.Repository
+import com.example.anchorbooks.pojo.Books
+import com.example.anchorbooks.remote.Repository
 import kotlinx.coroutines.launch
 
 class MainViewModel  (application: Application) : AndroidViewModel(application) {
     private val repository =  Repository(application)
-    private val flagsList = repository.passLiveDataToViewModel()
+    private val booksList = repository.passLiveDataToViewModel()
    // private val flagsFavList = repository.passLiveFavDataToViewModel()
 
     fun fetchFromServer() {
@@ -19,8 +18,8 @@ class MainViewModel  (application: Application) : AndroidViewModel(application) 
     }
 
     //agregar favorito
-    fun updateFav(flags: Flags) = viewModelScope.launch {
-        repository.updateFav(flags)
+    fun updateFav(books: Books) = viewModelScope.launch {
+        repository.updateFav(books)
     }
 
     //favorito
@@ -29,11 +28,11 @@ class MainViewModel  (application: Application) : AndroidViewModel(application) 
     }*/
 
 
-    fun getDataFromDB(id: Int): LiveData<List<Flags>> {
-        return flagsList
+    fun getDataFromDB(id: Int): LiveData<List<Books>> {
+        return booksList
     }
 
-    fun getIdDataFromDB(id: Int): LiveData<Flags> {
+    fun getIdDataFromDB(id: Int): LiveData<Books> {
         return repository.passIdtoFragment(id)
     }
 

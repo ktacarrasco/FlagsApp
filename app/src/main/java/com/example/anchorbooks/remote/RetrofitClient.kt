@@ -1,4 +1,4 @@
-package com.example.banderasapp.remote
+package com.example.anchorbooks.remote
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -7,7 +7,8 @@ class RetrofitClient {
 
     companion object {
         // private const val BASE_URL = "https://my-json-server.typicode.com/ktacarrasco/apitragos/"
-        private const val BASE_URL = "https://restcountries.eu/rest/v2/"
+        private const val BASE_URL = "https://my-json-server.typicode.com/Himuravidal/anchorBooks/"
+
 
         fun retrofitInstance(): Api {
             val retrofit = Retrofit.Builder()

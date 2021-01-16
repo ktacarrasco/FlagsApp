@@ -1,4 +1,4 @@
-package com.example.banderasapp
+package com.example.anchorbooks
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -13,10 +13,9 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import com.example.banderasapp.R
-import com.example.banderasapp.pojo.Flags
-import com.example.banderasapp.ui.main.Adapter
-import com.example.banderasapp.ui.main.MainViewModel
+import com.example.anchorbooks.pojo.Books
+import com.example.anchorbooks.ui.main.Adapter
+import com.example.anchorbooks.ui.main.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_second.*
@@ -36,7 +35,7 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
     private const val ARG_PARAM3 = "image"
 
 
-    private var ListItem: List<Flags> = ArrayList<Flags>()
+    private var listItem: List<Books> = ArrayList<Books>()
 
     private lateinit var viewAdapter: Adapter
     private lateinit var mViewModel: MainViewModel
@@ -89,19 +88,19 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
 
                     //viewAdapter.updateData(it)
 
-                    view.titleTV.text = " ${it.name}"
+                    view.titleTV.text = " ${it.title}"
                     //view.titleTV.text = it.name
-                    if (it.capital != null) {
-                        Log.d("description", it.capital)
-                        view.apparanceTV.text = "capital: ${it.capital}"
+                    if (it.author != null) {
+                        Log.d("author", it.author)
+                        view.apparanceTV.text = "Autor: ${it.author}"
                     }
 
-                    view.apparance2TV.text = "Region = ${it.region}"
-                    view.apparance3TV.text = "Native Name =  $ ${it.nativeName}"
-                    /* Picasso.get()
-                        .load(it.image)
+                    view.apparance2TV.text = "Region = ${it.country}"
+                    view.apparance3TV.text = "Idioma =  $ ${it.language}"
+                    Picasso.get()
+                        .load(it.imageLink)
                         .placeholder(R.drawable.ic_launcher_foreground)
-                        .into(view.photoTV)*/
+                        .into(view.photoTV)
 
                     fab.setOnClickListener { view ->
                         Snackbar.make(view, "Send mail", Snackbar.LENGTH_LONG)
@@ -114,11 +113,11 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
                         ) //destinatario email
                         Email.putExtra(
                             Intent.EXTRA_SUBJECT,
-                            "consulta por ${it.name} , id ${it.id}"
+                            "consulta por ${it.title} , id ${it.id}"
                         ) // Email 's Subject
                         Email.putExtra(
                             Intent.EXTRA_TEXT, "“Hola\n" +
-                                    "Vi el producto ${it.name} y me gustaría que me contactaran a este correo o al\n" +
+                                    "Vi el producto ${it.title} y me gustaría que me contactaran a este correo o al\n" +
                                     "siguiente número _________\n" +
                                     "Quedo atento.”"
                         ) //Email 's Greeting text

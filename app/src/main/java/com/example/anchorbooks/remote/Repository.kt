@@ -1,42 +1,41 @@
-package com.example.banderasapp.remote
+package com.example.anchorbooks.remote
 
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
-import com.example.banderasapp.db.RoomFlags
-import com.example.banderasapp.pojo.Flags
+import com.example.anchorbooks.db.RoomBooks
+import com.example.anchorbooks.pojo.Books
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
 
 class Repository(context: Context) {
 
-    private val tag = "FlagsRepository"
+    private val tag = "BooksRepository"
 
     //esto viene  de la Base de datos
-    private val db: RoomFlags = RoomFlags.getDatabase(context)
-    private val flagsList = db.barDao().getAllFlagsList()
+    private val db: RoomBooks = RoomBooks.getDatabase(context)
+    private val booksList = db.barDao().getAllBooksList()
    // private val cocktailsFavList = db.barDao().getAllFavcocktailsList()
 
-    fun passLiveDataToViewModel(): LiveData<List<Flags>> {
-        return flagsList
+    fun passLiveDataToViewModel(): LiveData<List<Books>> {
+        return booksList
     }
 
   /*  fun passLiveFavDataToViewModel(): LiveData<List<Cocktails>> {
         return cocktailsFavList
     }*/
 
-    fun  passIdtoFragment(id :Int): LiveData<Flags> {
+    fun  passIdtoFragment(id :Int): LiveData<Books> {
 
         return  db.barDao().getIdList(id)
     }
 
-    suspend fun updateFav( flags: Flags){
-        db.barDao().updateFav(flags)
+    suspend fun updateFav(books: Books){
+        db.barDao().updateFav(books)
     }
 
 
@@ -44,12 +43,14 @@ class Repository(context: Context) {
     // esto hace la llamada a retrofit
     fun fetchDataFromServer() {
         val service = RetrofitClient.retrofitInstance()
-        val call = service.getFlags()
+        val call = service.getBooks()
 
 
 
-        call.enqueue(object : Callback<List<Flags>> {
-            override fun onResponse(call: Call<List<Flags>>, response: Response<List<Flags>>) {
+        call.enqueue(object : Callback<List<Books>> {
+
+
+            override fun onResponse(call: Call<List<Books>>, response: Response<List<Books>>) {
                 Log.d(tag, response.body().toString())
                 CoroutineScope(Dispatchers.IO).launch {
 
@@ -57,9 +58,8 @@ class Repository(context: Context) {
                 }
             }
 
-            override fun onFailure(call: Call<List<Flags>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Books>>, t: Throwable) {
                 Log.d(tag, t.message.toString())
-
             }
         })
 

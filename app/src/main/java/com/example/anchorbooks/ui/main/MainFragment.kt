@@ -1,4 +1,4 @@
-package com.example.banderasapp.ui.main
+package com.example.anchorbooks.ui.main
 
 import android.os.Bundle
 import android.util.Log
@@ -10,14 +10,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.banderasapp.R
-import com.example.banderasapp.pojo.Flags
+import com.example.anchorbooks.R
+import com.example.anchorbooks.pojo.Books
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() ,Adapter.MyClickListener  {
 
-    private var flagsList =  ArrayList<Flags>()
+    private var booksList =  ArrayList<Books>()
 
     private lateinit var viewAdapter: Adapter
     private lateinit var mViewModel: MainViewModel
@@ -41,7 +40,7 @@ class MainFragment : Fragment() ,Adapter.MyClickListener  {
 
         mViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         // Iniciando el adapter
-        viewAdapter = Adapter(flagsList, this)
+        viewAdapter = Adapter(booksList, this)
         RecyclerView.layoutManager = LinearLayoutManager(context)
         RecyclerView.adapter = viewAdapter
 
@@ -53,18 +52,12 @@ class MainFragment : Fragment() ,Adapter.MyClickListener  {
         })
     }
 
-    override fun onItemClick(flags: Flags) {
+    override fun onItemClick(books: Books) {
         val bundle=Bundle()
-        bundle.putInt("id",flags.id)
+        bundle.putInt("id",books.id)
         findNavController().navigate(R.id.action_firstFragment_to_secondFragment,bundle)
     }
 
-    override fun favClick(flags: Flags) {
-        TODO("Not yet implemented")
-    }
 
-    override fun desfavClick(flags: Flags) {
-        TODO("Not yet implemented")
-    }
 
 }

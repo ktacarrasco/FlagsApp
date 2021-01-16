@@ -1,22 +1,22 @@
-package com.example.banderasapp.db
+package com.example.anchorbooks.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.banderasapp.pojo.Flags
+import com.example.anchorbooks.pojo.Books
 
-@Database(entities = [Flags::class], version = 1,exportSchema = false)
-abstract class RoomFlags : RoomDatabase(){
+@Database(entities = [Books::class], version = 1,exportSchema = false)
+abstract class RoomBooks : RoomDatabase(){
 
 
-    abstract fun barDao() : DaoFlags
+    abstract fun barDao() : DaoBooks
 
     companion object {
         @Volatile
-        private var INSTANCE: RoomFlags? = null
+        private var INSTANCE: RoomBooks? = null
 
-        fun getDatabase(context: Context): RoomFlags {
+        fun getDatabase(context: Context): RoomBooks {
             val tempInstance = INSTANCE
             if (tempInstance != null) {
                 return tempInstance
@@ -24,8 +24,8 @@ abstract class RoomFlags : RoomDatabase(){
             synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    RoomFlags::class.java,
-                    "Flags_table")
+                    RoomBooks::class.java,
+                    "Books_table")
                     .build()
                 INSTANCE = instance
                 return instance
