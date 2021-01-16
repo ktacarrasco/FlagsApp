@@ -3,15 +3,19 @@ package com.example.anchorbooks
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.ClickableSpan
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.anchorbooks.pojo.Books
 import com.example.anchorbooks.ui.main.Adapter
@@ -52,7 +56,7 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
     private var imagedetail: ImageView? = null
 
 
-    class SecondFragment : Fragment(), Adapter.IAdapter {
+    class SecondFragment : Fragment(), Adapter.IAdapter{
 
         private var param1: Int? = null
         private var param2: String? = null
@@ -123,6 +127,10 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
                     view.apparance7TV.text = "Ultimo Precio =  $ ${it.lastPrice}"
                     view.apparance8TV.text = "Informacion = ${it.link}"
 
+
+
+
+
                     if (it.delivery != "true"){
                     view.apparance9TV.text = "Despacho = Sin despacho"}
                     if (it.delivery == "true"){
@@ -185,6 +193,7 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
         override fun getFromAdapter(id: Int) {
             mViewModel.getDataFromDB(id)
         }
+
 
 
     }

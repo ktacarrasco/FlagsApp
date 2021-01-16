@@ -10,7 +10,7 @@ interface DaoBooks {
 
     //Insertar un listado
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertAll(listBooks: kotlin.collections.List<com.example.anchorbooks.pojo.Books>)
+    suspend fun insertAll(listBooks: List<Books>)
 
     //agregar fav
     @Update
