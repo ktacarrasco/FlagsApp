@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="27dp"
                 android:text=""
-                android:textColor="#FA0C0101"
+                android:textColor="#212121"
                 android:textSize="20sp"
                 app:layout_constraintTop_toBottomOf="@+id/photoTV"
                 tools:layout_editor_absoluteX="0dp" />
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="27dp"
                 android:text=""
-                android:textColor="#FA0C0101"
+                android:textColor="#212121"
                 android:textSize="20sp"
                 app:layout_constraintTop_toBottomOf="@+id/apparance2TV"
                 tools:layout_editor_absoluteX="0dp" />
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="27dp"
                 android:text=""
-                android:textColor="#FA0C0101"
+                android:textColor="#212121"
                 android:textSize="20sp"
                 app:layout_constraintTop_toBottomOf="@+id/titleTV"
                 tools:layout_editor_absoluteX="0dp" />
@@ -67,7 +67,67 @@
                 android:layout_width="match_parent"
                 android:layout_height="27dp"
                 android:text=""
-                android:textColor="#FA0C0101"
+                android:textColor="#212121"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/apparanceTV"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/apparance4TV"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text=""
+                android:textColor="#212121"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/apparanceTV"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/apparance5TV"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text=""
+                android:textColor="#212121"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/apparanceTV"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/apparance6TV"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text=""
+                android:textColor="#212121"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/apparanceTV"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/apparance7TV"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text=""
+                android:textColor="#212121"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/apparanceTV"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/apparance8TV"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text=""
+                android:textColor="#212121"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/apparanceTV"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/apparance9TV"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text=""
+                android:textColor="#212121"
                 android:textSize="20sp"
                 app:layout_constraintTop_toBottomOf="@+id/apparanceTV"
                 tools:layout_editor_absoluteX="16dp" />
@@ -76,7 +136,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/cardview_default_elevation"
-                android:text="Para comunicarse con nuestra  compañía, sin respetar ese período de permanencia, puede hacerlo pagando una suma por esa rescisión anticipada."
+                android:text="Stock.
+Toda compra realizada está sujeta a confirmación de stock. En caso de no poder sumistrar el producto nos pondremos en contacto vía correo electrónico para ofrecer cambio de producto o devolución de dinero.
+
+
+
+Condiciones de Entrega
+El pedido será entregado a la persona que esté en la dirección ingresada en el mail de confirmación de compra. El receptor deberá firmar el comprobante y adjuntar su número de RUT.
+
+Ante dos intentos fallidos por entregar la encomienda, la empresa se comunicará telefónicamente con el usuario para coordinar una última entrega.
+
+Todos los valores en nuestro sitio incluyen IVA. Ver Tabla de Valores.El costo de despacho está asociado al envío, independiente de la cantidad de productos comprados. Por lo que en caso de compras que contemplan más de un producto, y que un producto no sea despachado y debamos realizar devolución de dinero, no se realizará devolución del despacho. En caso de compras de 1 solo producto, si este no puede ser suministrado si se reembolsará el valor de despacho."
                 tools:ignore="MissingConstraints" />
 
 

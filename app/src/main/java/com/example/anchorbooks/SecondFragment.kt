@@ -21,8 +21,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_second.*
 import kotlinx.android.synthetic.main.fragment_second.view.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
 
 /**
  * A simple [Fragment] subclass.
@@ -33,9 +32,17 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
     private const val ARG_PARAM1 = "id"
     private const val ARG_PARAM2 = "name"
     private const val ARG_PARAM3 = "image"
+    private const val ARG_PARAM4 = "pages"
+    private const val ARG_PARAM5 = "year"
+    private const val ARG_PARAM6 = "price"
+    private const val ARG_PARAM7 = "lastPrice"
+    private const val ARG_PARAM8 = "link"
+    private const val ARG_PARAM9 = "delivery"
 
 
-    private var listItem: List<Books> = ArrayList<Books>()
+
+
+        private var listItem: List<Books> = ArrayList<Books>()
 
     private lateinit var viewAdapter: Adapter
     private lateinit var mViewModel: MainViewModel
@@ -50,6 +57,13 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
         private var param1: Int? = null
         private var param2: String? = null
         private var param3: String? = null
+        private var param4: Int? = null
+        private var param5: Int? = null
+        private var param6: Int? = null
+        private var param7: Int? = null
+        private var param8: String? = null
+        private var param9: String? = null
+
 
         // private const val ARG_PARAM2 = "images"
 
@@ -62,6 +76,12 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
                 param1 = it.getInt(ARG_PARAM1)
                 param2 = it.getString(ARG_PARAM2)
                 param3 = it.getString(ARG_PARAM3)
+                param4 = it.getInt(ARG_PARAM4)
+                param5 = it.getInt(ARG_PARAM5)
+                param6 = it.getInt(ARG_PARAM6)
+                param7 = it.getInt(ARG_PARAM7)
+                param8 = it.getString(ARG_PARAM8)
+                param9 = it.getString(ARG_PARAM9)
 
                 //Iniciando el ViewModel
                 mViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
@@ -97,6 +117,18 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
 
                     view.apparance2TV.text = "Region = ${it.country}"
                     view.apparance3TV.text = "Idioma =  $ ${it.language}"
+                    view.apparance4TV.text = "Paginas = ${it.pages}"
+                    view.apparance5TV.text = "Año =   ${it.year}"
+                    view.apparance6TV.text = "Precio = $ ${it.price}"
+                    view.apparance7TV.text = "Ultimo Precio =  $ ${it.lastPrice}"
+                    view.apparance8TV.text = "Informacion = ${it.link}"
+
+                    if (it.delivery != "true"){
+                    view.apparance9TV.text = "Despacho = Sin despacho"}
+                    if (it.delivery == "true"){
+                        view.apparance9TV.text = "Despacho =  Cuenta con despacho"}
+
+
                     Picasso.get()
                         .load(it.imageLink)
                         .placeholder(R.drawable.ic_launcher_foreground)
@@ -109,7 +141,7 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
                         Email.setType("text/email")
                         Email.putExtra(
                             Intent.EXTRA_EMAIL,
-                            arrayOf<String>("info@plaplix.cl")
+                            arrayOf<String>("ventas@anchorBooks.cl")
                         ) //destinatario email
                         Email.putExtra(
                             Intent.EXTRA_SUBJECT,
@@ -117,7 +149,7 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
                         ) // Email 's Subject
                         Email.putExtra(
                             Intent.EXTRA_TEXT, "“Hola\n" +
-                                    "Vi el producto ${it.title} y me gustaría que me contactaran a este correo o al\n" +
+                                    "Vi el Libro ${it.title} de codigo ${it.id} y me gustaría que me contactaran a este correo o al\n" +
                                     "siguiente número _________\n" +
                                     "Quedo atento.”"
                         ) //Email 's Greeting text

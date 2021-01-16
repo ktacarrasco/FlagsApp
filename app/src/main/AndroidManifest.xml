@@ -2,11 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.anchorbooks">
 
+
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@android:drawable/ic_input_get"
         android:label="AnchorBooks"
         android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"

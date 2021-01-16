@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="13dp"
             android:background="?android:attr/listDivider"
-            android:outlineAmbientShadowColor="#010102" />
+            android:outlineAmbientShadowColor="#212121" />
 
         <TextView
             android:id="@+id/priceView"
@@ -32,7 +32,7 @@
             android:layout_height="34dp"
             android:layout_marginStart="35dp"
             android:layout_marginEnd="64dp"
-            android:textColor="#FA0C0101"
+            android:textColor="#212121"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@
             android:layout_marginStart="35dp"
             android:layout_marginEnd="64dp"
             android:text=""
-            android:textColor="#FA0C0101"
+            android:textColor="#212121"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="13dp"
             android:background="?android:attr/listDivider"
-            android:outlineAmbientShadowColor="#010102" />
+            android:outlineAmbientShadowColor="#212121" />
 
 
     </LinearLayout>

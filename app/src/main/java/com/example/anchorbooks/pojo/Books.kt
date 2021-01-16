@@ -18,4 +18,4 @@ import com.google.gson.annotations.SerializedName
                        val price: Int,
                        val lastPrice: Int,
                        val link: String,
-                       val delivery: Boolean)
+                       val delivery: String)
